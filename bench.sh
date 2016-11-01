@@ -53,14 +53,13 @@ Clean;
     swap=$( free -m | awk '/Swap/ {print $2}' )
     disk=$( df -h |awk '/rootfs/{ print $2 }' )
     fred=$( df -h |awk '/rootfs/{ print $4 }' )
-        usdp=$( df -h |awk '/rootfs/{ print $5 }' )
+    usdp=$( df -h |awk '/rootfs/{ print $5 }' )
     up=$( awk '{a=$1/86400;b=($1%86400)/3600;c=($1%3600)/60;d=$1%60} {printf("%ddays, %d:%d:%d\n",a,b,c,d)}' /proc/uptime )
     load=$( w | head -1 | awk -F'load average:' '{print $2}' | sed 's/^[ \t]*//;s/[ \t]*$//' )
     opsy=$( get_opsy )
     arch=$( uname -m )
     lbit=$( getconf LONG_BIT )
     kern=$( uname -r )
-    ipv6=$( wget -qO- -t1 -T2 ipv6.icanhazip.com )
 
     clear
     next
