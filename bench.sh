@@ -18,7 +18,7 @@ echo ""
 
 pre_test() {
     [ -f "/usr/bin/speedtest" ] && return
-    wget --no-check-certificate -q -O /usr/local/bin/speedtest_cli.py "https://github.com/0oVicero0/VPS-TEST/raw/master/speedtest_cli.py" 
+    wget --no-check-certificate -q -O /usr/local/bin/speedtest_cli.py "https://github.com/0oVicero0/VPS-Bench/raw/master/speedtest_cli.py" 
     [ -f "/usr/local/bin/speedtest_cli.py" ] && chmod 755 /usr/local/bin/speedtest_cli.py && chmod +x /usr/local/bin/speedtest_cli.py
     [ -f "/usr/local/bin/speedtest_cli.py" ] && ln -sf /usr/local/bin/speedtest_cli.py /usr/bin/speedtest
 }
