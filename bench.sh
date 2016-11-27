@@ -92,5 +92,6 @@ next
     echo "I/O Average : $ioavg MB/s"
 next
     
-    [ -z `which python` ] && [ -z `which python3` ] && Clean && exit 1
-    pre_test && speed_test && next && Clean && exit 0
+#    [ -z `which python` ] && [ -z `which python3` ] && Clean && exit 1
+#    pre_test && speed_test && next && Clean && exit 0
+     Clean && exit 0
